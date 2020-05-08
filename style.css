@@ -1,0 +1,90 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(50, 66, 77);
+    text-align: center;
+    color:white;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+.game{
+    display: grid;
+    margin: auto;
+    grid-template-areas: "password password"
+                         "letters  wheel";
+    grid-template-columns: 50% 50%;  
+    grid-template-rows: 100px 300px;
+    border: 2px solid white;
+    font-family: 'Inconsolata';
+    font-weight: 700;
+}
+
+.password{
+    grid-area: password;
+    display: flex;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+.letters{
+    grid-area: letters;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    grid-gap: 0;
+    border: 2px solid red;
+}
+
+.wheel{
+    grid-area: wheel;
+    border: 2px solid blue;
+}
+
+.hiddenLetter{  
+    background: #fff;
+    width: 1.5rem;
+    font-size: 2rem;
+    margin: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: 1px solid gray;
+}
+
+.hiddenSpace{  
+    width: 1.5rem;
+    font-size: 2.5rem;
+    margin: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.activeLetter{
+    width: 20px;
+    height: 35px;
+    margin: auto;
+    padding: auto;
+    font-size: 2rem;
+    font-family: 'Inconsolata';
+    font-weight: 700;
+    border:3px solid  white;
+    border-radius: 5px;
+}
+
+.deactiveLetter{
+    border:3px solid  gray;
+    color:gray;
+}
+
+
+.showLetter{
+    color: black;
+}
+
+
