@@ -1,4 +1,3 @@
-
 *{
     margin: 0;
     padding: 0;
@@ -14,14 +13,18 @@ h1{
     text-align: center;
 }
 
+
+h3{
+    margin-top: 5px;
+    color: skyblue;
+}
+
 .game{
     display: grid;
-    margin: auto;
     grid-template-areas: "password password"
-                         "letters  wheel";
+                         "options letters";
     grid-template-columns: 50% 50%;  
-    grid-template-rows: 100px 300px;
-    border: 2px solid white;
+    grid-template-rows: 100px 275px;
     font-family: 'Inconsolata';
     font-weight: 700;
 }
@@ -30,7 +33,6 @@ h1{
     grid-area: password;
     display: flex;
     justify-content: center;
-    border: 2px solid white;
 }
 
 .letters{
@@ -38,14 +40,74 @@ h1{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr 1fr 1fr; 
-    grid-gap: 0;
-    border: 2px solid red;
+    grid-gap: 10px;
+    margin: auto;
+    margin-top: 10px;
+
 }
 
-.wheel{
-    grid-area: wheel;
-    border: 2px solid blue;
+.prices{
+    grid-area: options;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-gap: 10px;
+    margin: 10px auto auto 20px;
+    
 }
+.price{
+    height: 35px;
+    padding: auto;
+    font-size: 2rem;
+    font-family: 'Inconsolata';
+    font-weight: 500;
+    border:3px solid  white;
+    border-radius: 5px;
+}
+
+.goodPrice{
+    background-color: rgb(4, 231, 80);
+    border:3px solid  green;
+    color: rgb(192, 255, 17);
+}
+.badPrice{
+    background-color: rgb(170, 0, 60);
+    border:3px solid  red;
+    color: red;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    margin: 10px auto auto 20px;
+}
+
+button{
+    width: 100px;
+    height: 25px;
+    font-size: 1rem;
+    font-family: 'Inconsolata';
+    font-weight: 700;
+    background-color: greenyellow;
+    border: 2px solid  green;
+    color: black;
+    border-radius: 5px;
+    margin:auto;
+}
+
+button:hover{
+    background-color: green;
+    border:3px solid  white;
+    color: white;
+    cursor: pointer;
+}
+
+.reset{
+    background-color: white;
+    border: 2px solid  gray;
+}
+
 
 .hiddenLetter{  
     background: #fff;
@@ -66,15 +128,15 @@ h1{
 }
 
 .activeLetter{
-    width: 20px;
+    width: 35px;
     height: 35px;
-    margin: auto;
     padding: auto;
     font-size: 2rem;
     font-family: 'Inconsolata';
     font-weight: 700;
     border:3px solid  white;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .deactiveLetter{
@@ -82,9 +144,12 @@ h1{
     color:gray;
 }
 
-
 .showLetter{
     color: black;
 }
 
+.messages{
+    margin-left:auto;
+    color: red;
 
+}

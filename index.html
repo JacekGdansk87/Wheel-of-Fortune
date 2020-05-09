@@ -3,22 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wheel of Fortune</title>
+    <title>Wheel of Fortune. TV series.</title>
     <link href="style.css" rel="stylesheet" type="text/css" >
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
     <div class="header">
-        <h2>Wheel of Fortune.</h2>
+        <h2>Wheel of Fortune. TV series</h2>
     </div>
     
     <div class="game">
         <div class="password"></div>              
-        <div class="letters"></div>              
-        <div class="wheel"></div>              
+        <div class="letters"></div>   
+
+        <div class="options">
+            <div class="prices"></div>
+            
+        <div class="info">
+            <h3 class ='lettersLeft'>Letters  left:</h3>
+            <h3 class ='turnPoints'>Turn points:</h3>
+            <h3 class = 'leftChances'>Left chances: </h3>
+            <h3 class = 'points'>Points: </h3>
+
+            <button class="reset" onclick="location.reload()">Reset Game</button>
+            <button class="draw" onclick="drawPrice()">Draw</button>
+        </div>   
+
     </div>
-    
+</div>
+
+<div class="messages">
+    <h4>Choose the price by clicking draw</h4>
+</div>
 
     <script src="main.js"></script>
 </body>
